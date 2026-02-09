@@ -7,7 +7,8 @@ from database import SessionLocal
 from starlette import status
 from starlette.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
-from auth import get_current_user, get_user_from_token
+from routers.auth import get_current_user, get_user_from_token
+
 
 templates = Jinja2Templates(directory="ToDoApp/templates")
 

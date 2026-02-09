@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from Models import ToDo, User
 from database import SessionLocal
 from starlette import status
-from auth import get_current_user
+from routers.auth import get_current_user
 
 def get_db():
     db = SessionLocal()
