@@ -2,10 +2,10 @@ from typing import Annotated
 from fastapi import Depends, APIRouter, HTTPException, Path
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
-from ..Models import ToDo, User
-from ..database import SessionLocal
+from Models import ToDo, User
+from database import SessionLocal
 from starlette import status
-from .auth import get_current_user
+from auth import get_current_user
 
 def get_db():
     db = SessionLocal()

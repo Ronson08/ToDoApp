@@ -2,12 +2,12 @@ from typing import Annotated
 from fastapi import Depends, APIRouter, HTTPException, Path, Request, status
 from pydantic import BaseModel, Field
 #from sqlalchemy.orm import Session
-from ..Models import ToDo
-from ..database import SessionLocal
+from Models import ToDo
+from database import SessionLocal
 from starlette import status
 from starlette.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
-from .auth import get_current_user, get_user_from_token
+from auth import get_current_user, get_user_from_token
 
 templates = Jinja2Templates(directory="ToDoApp/templates")
 
